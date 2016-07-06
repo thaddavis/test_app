@@ -12,7 +12,7 @@
             <br>
             <%= time_ago_in_words(article.created_at) + " ago"  %>
 
-            <% if logged_in? && current_user == article.user %>
+            <% if logged_in? && (current_user == article.user || current_user.admin?) %>
               <%= link_to "Edit article", edit_article_path(article), { :class=>"btn" } %>
               <%= link_to "Show article", article_path(article), { :class=>"btn" } %>
               <%= link_to "Delete article", article_path(article), method: :delete, data: { confirm: 'Are you sure?'} %>
