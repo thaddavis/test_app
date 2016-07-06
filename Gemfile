@@ -28,6 +28,11 @@ gem 'awesome_print'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Pagination gem
+gem 'will_paginate', '3.0.7'
+# Boostrap gem for pagination
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
