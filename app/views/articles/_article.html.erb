@@ -11,14 +11,16 @@
             <small>Created by: <%= article.user.username if article.user %> </small>
             <br>
             <%= time_ago_in_words(article.created_at) + " ago"  %>
-          <div>
+
+            <% if logged_in? && current_user == article.user %>
+              <%= link_to "Edit article", edit_article_path(article), { :class=>"btn" } %>
+              <%= link_to "Show article", article_path(article), { :class=>"btn" } %>
+              <%= link_to "Delete article", article_path(article), method: :delete, data: { confirm: 'Are you sure?'} %>
+            <% end %>
+          </div>
         </div>
-
-        <%= link_to "Edit article", edit_article_path(article), { :class=>"btn" } %>
-        <%= link_to "Show article", article_path(article), { :class=>"btn" } %>
-        <%= link_to "Delete article", article_path(article), method: :delete, data: { confirm: 'Are you sure?'} %>
-
       </div>
     </div>
   </div>
+
 <% end %>
