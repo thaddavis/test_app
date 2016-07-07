@@ -1,6 +1,9 @@
 <h1 class="center"> <%= "Category: " + @category.name %> </h1>
 
 <div class="center">
+  <div class="row">
+    <span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
+  </div>
   <%= will_paginate @category_articles %>
 </div>
 
