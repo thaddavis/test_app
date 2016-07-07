@@ -1,10 +1,11 @@
 require 'test_helper'
 
+
 class CategoriesControllerTest < ActionController::TestCase
 
   def setup
     @category = Category.create(name: "sports")
-    @user = User.new(username: "a", email: "a@a.com", password: "asdf", admin: true)
+    @user = User.create(username: "asdfasdf", email: "a@a.com", password: "password", admin: true)
   end
 
   test "should get categories index" do
