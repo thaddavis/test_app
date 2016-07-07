@@ -65,6 +65,17 @@ $navbar-default-bg: #08088A;
   margin-top: 15px;
 }
 
+.badge {
+  background-color: #CEF;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
